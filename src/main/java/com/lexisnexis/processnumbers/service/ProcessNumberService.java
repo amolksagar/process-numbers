@@ -1,7 +1,6 @@
 package com.lexisnexis.processnumbers.service;
 
 import org.springframework.stereotype.Service;
-
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.Collections;
