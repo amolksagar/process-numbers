@@ -36,7 +36,6 @@ public class ProcessNumberService {
             // Convert decimal number to a list of bytes
             byteList.add(decimalNumber % 256);
             decimalNumber /= 256;
-            System.out.println("decimalNumber --- "+decimalNumber);
         }
         Collections.reverse(byteList);
         return byteList;
