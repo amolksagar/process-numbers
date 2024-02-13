@@ -33,6 +33,7 @@ public class ProcessNumberService {
     private List<Integer> decodeInteger(int decimalNumber) {
         List<Integer> byteList = new ArrayList<>();
         while (decimalNumber > 0) {
+            // Convert decimal number to a list of bytes
             byteList.add(decimalNumber % 256);
             decimalNumber /= 256;
             System.out.println("decimalNumber --- "+decimalNumber);
@@ -44,6 +45,7 @@ public class ProcessNumberService {
     private List<Integer> decodeBigInteger(BigInteger decimalNumber) {
         List<Integer> byteList = new ArrayList<>();
         while (!decimalNumber.equals(BigInteger.ZERO)) {
+            // Convert decimal number to a list of bytes
             int toBeAdded = decimalNumber.mod(BigInteger.valueOf(256)).intValue();
             byteList.add(toBeAdded);
             decimalNumber = decimalNumber.divide(BigInteger.valueOf(256));
